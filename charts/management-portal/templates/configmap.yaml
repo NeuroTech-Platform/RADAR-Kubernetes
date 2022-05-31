@@ -24,3 +24,4 @@ data:
     radar_fitbit_connector;res_restAuthorizer;{{ .Values.client_secrets.radarFitbitConnector }};SUBJECT.READ;client_credentials;;;43200;;{};
     radar_appconfig;res_ManagementPortal;test;SOURCETYPE.READ,MEASUREMENT.CREATE,PROJECT.READ,SUBJECT.READ,OAUTHCLIENTS.READ;{{ .Values.client_secrets.radarAppconfig }};;3600;78000;;
     radar_appconfig_frontend;res_appconfig;;SOURCETYPE.READ,MEASUREMENT.CREATE,PROJECT.READ,PROJECT.CREATE,PROJECT.UPDATE,SUBJECT.READ,SUBJECT.UPDATE,OAUTHCLIENTS.READ;authorization_code,refresh_token;https://{{ .Values.server_name }}/appconfig/login;3600;78000;;
+    dreem_upload;res_ManagementPortal,res_gateway;{{ .Values.client_secrets.dreem_upload }};ROLE.READ,SOURCETYPE.READ,SUBJECT.UPDATE,MEASUREMENT.CREATE,PROJECT.READ,USER.READ,SOURCE.READ,SOURCEDATA.READ,SUBJECT.READ;client_credentials;;;900;;{"dynamic_registration": true};

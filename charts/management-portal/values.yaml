@@ -78,3 +78,4 @@ client_secrets:
   radar_upload_frontend: secret
   radar_rest_sources_backend: secret
   radarFitbitConnector: secret
+  dreem_upload: secret
