@@ -43,7 +43,7 @@ releases:
       - name: "grafana\\.ini.server.root_url"
         value: "https://dashboard.{{ .Values.server_name }}/"
       - name: ingress.tls[0].secretName
-        value: radar-base-tls-dashboard
+        value: radar-base-tls
       - name: ingress.tls[0].hosts
         values: ["dashboard.{{ .Values.server_name }}"]
       - name: "grafana\\.ini.metrics.basic_auth_username"
@@ -64,9 +64,9 @@ releases:
     set:
       - name: kafka_num_brokers
         value: {{ .Values.kafka_num_brokers }}
-      - name: timescaledb.password
+      - name: jdbc.url
+        value: jdbc:postgresql://timescaledb-postgresql-hl:5432/{{ .Values.timescaledb_db_name }}
+      - name: jdbc.password
         value: {{ .Values.timescaledb_password }}
-      - name: timescaledb.username
+      - name: jdbc.username
         value: postgres
-      - name: timescaledb.database_name
-        value: {{ .Values.timescaledb_db_name }}
