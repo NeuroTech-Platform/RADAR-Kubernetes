@@ -3,12 +3,9 @@ kubernetes-HDFS/
 keystore.p12*
 radar-is.yml
 *.tgz
-production.yaml
-production.yaml.gotmpl
 .idea/
 RADAR-Kubernetes.iml
 postgreskeystore.jks
-environments.yaml
 charts/management-portal/files/root.crt
 charts/radar-rest-sources-backend/files/root.crt
 secrets.yaml
@@ -18,3 +15,4 @@ secrets/
 google-services.json
 google-credentials.json
 !.github/environments.yaml
+firebase-adminsdk.json
